@@ -4,6 +4,16 @@ class Livros {
             this.autor = autor,
             this.modalHTML = modalHTML
     }
+
+    disponivel = true;
+
+    tornarIndisponivel() {
+        this.disponivel = false;
+    }
+
+    tornarDisponivel() {
+        this.disponivel = true;
+    }
 }
 
 let livros = [];
@@ -369,7 +379,6 @@ for (let i = 0; i < modalLivros.length; i++) {
         exibirModalLivros(`${i}`);
     })
 }
-
 
 
 
