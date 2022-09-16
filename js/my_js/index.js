@@ -8,8 +8,6 @@ class Livros {
 
 let livros = [];
 
-// document.getElementById("exampleModal").innerHTML =
-
 let livro1 = new Livros("As Grandes Mentiras sobre a Igreja Católica", "Alexandre e Viviane Varela",
     `<div class="modal-dialog modal-dialog-scrollable">
 <div class="modal-content">
@@ -186,7 +184,7 @@ let livro4 = new Livros("Como a Igreja Católica Construiu a Civilização Ocide
 livros.push(livro4);
 
 let livro5 = new Livros("A Resposta Católica", "Padre Paulo Ricardo",
-`<div class="modal-dialog modal-dialog-scrollable">
+    `<div class="modal-dialog modal-dialog-scrollable">
 <div class="modal-content">
     <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">A Resposta Católica - Padre Paulo Ricardo
@@ -216,7 +214,7 @@ let livro5 = new Livros("A Resposta Católica", "Padre Paulo Ricardo",
 livros.push(livro5);
 
 let livro6 = new Livros("A Fé Explicada", "Leo J. Trese",
-`<div class="modal-dialog modal-dialog-scrollable">
+    `<div class="modal-dialog modal-dialog-scrollable">
 <div class="modal-content">
     <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">A Fé Explicada - Leo J. Trese</h5>
@@ -275,7 +273,7 @@ let livro6 = new Livros("A Fé Explicada", "Leo J. Trese",
 livros.push(livro6);
 
 let livro7 = new Livros("As Moradas do Castelo Interior", "Santa Teresa d'Ávila",
-`<div class="modal-dialog modal-dialog-scrollable">
+    `<div class="modal-dialog modal-dialog-scrollable">
 <div class="modal-content">
     <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">As Moradas do Castelo Interior - Santa
@@ -324,7 +322,7 @@ let livro7 = new Livros("As Moradas do Castelo Interior", "Santa Teresa d'Ávila
 livros.push(livro7);
 
 let livro8 = new Livros("Todos os Caminhos Levam a Roma", "Scott e Kimberly Hahn",
-`<div class="modal-dialog modal-dialog-scrollable">
+    `<div class="modal-dialog modal-dialog-scrollable">
 <div class="modal-content">
     <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Todos os Caminhos Levam a Roma - Scott e
@@ -357,6 +355,20 @@ let livro8 = new Livros("Todos os Caminhos Levam a Roma", "Scott e Kimberly Hahn
 </div>`);
 
 livros.push(livro8);
+
+document.getElementById("exampleModal").innerHTML = livros[0].modalHTML;
+
+function exibirModalLivros(idx) {
+    document.getElementById("exampleModal").innerHTML = livros[parseInt(idx)].modalHTML;
+}
+
+let modalLivros = document.getElementsByClassName("modalLivros");
+
+for (let i = 0; i < modalLivros.length; i++) {
+    modalLivros[i].addEventListener("click", () => {
+        exibirModalLivros(`${i}`);
+    })
+}
 
 
 
