@@ -67,6 +67,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin: 30px;
 }
 
 .mainDiv5 .divFlex section img {
@@ -102,30 +103,4 @@
 
 footer {
     margin-top: 0;
-}
-
-/* Media Query */
-
-/* Mobile - (sm) no Bootstrap */
-
-@media screen and (max-width: 576px) {
-
-    .mainDiv5 .divFlex {
-        flex-wrap: wrap;
-    }
-
-    .mainDiv5 .divFlex section {
-        width: 26%;
-        margin-bottom: 6%;
-    }
-
-    #roundImgEscriva {
-        margin-left: auto;
-        margin-right: 6%;
-    }
-
-    #roundImgLewis {
-        margin-right: auto;
-        margin-left: 6%;
-    }
 }
