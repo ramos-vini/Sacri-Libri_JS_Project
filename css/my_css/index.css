@@ -4,6 +4,15 @@
     padding: 0;
 }
 
+.loading-placeholder {
+    display: none;
+}
+
+.custom-placeholder-color {
+    background-color: #9B1200 !important;
+    border-color: #9B1200 !important;
+}
+
 .modal-content {
     text-align: justify !important;
 }

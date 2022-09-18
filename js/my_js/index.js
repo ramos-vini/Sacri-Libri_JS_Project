@@ -419,11 +419,19 @@ const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstra
 
 // Spinner Bootstrap
 
-function mostrarSpinner() {
+function exibirSpinner() {
     document.getElementById("buscar").style = "display: none";
     document.getElementById("spinner-buscar").style = "display: block";
 }
-document.getElementById("buscar").addEventListener("click", mostrarSpinner);
+document.getElementById("buscar").addEventListener("click", exibirSpinner);
+
+// Placeholder Boostrap
+
+function exibirPlaceholder() {
+    document.getElementById("carouselExampleIndicators").style = "display: none";
+    document.querySelector(".loading-placeholder").style = "display: block";
+}
+document.getElementById("carouselExampleIndicators").addEventListener("load", exibirPlaceholder);
 
 
 
