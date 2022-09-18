@@ -380,7 +380,7 @@ for (let i = 0; i < modalLivros.length; i++) {
     })
 }
 
-// Slick Slider:
+// Slick Slider
 
 $(document).ready(function () {
     $('.carroselResponsivo').slick({
@@ -412,6 +412,18 @@ $(document).ready(function () {
     });
 });
 
+// Popover Bootstrap
+
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+
+// Spinner Bootstrap
+
+function mostrarSpinner() {
+    document.getElementById("buscar").style = "display: none";
+    document.getElementById("spinner-buscar").style = "display: block";
+}
+document.getElementById("buscar").addEventListener("click", mostrarSpinner);
 
 
 
