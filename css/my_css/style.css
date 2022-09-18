@@ -320,6 +320,11 @@ footer .divIcones {
         margin: auto;
     }
 
+    .mainCategorias{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
     h4 {
         font-size: 0.8em;
     }
